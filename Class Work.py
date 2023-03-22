@@ -13,9 +13,16 @@ else:
 
 
 # Задача 2
-word = input()
-simvole = word[::-1]
-if word == simvole:
-  print('True')
-else:
-  print('False')
+class Solution(object):
+    def isPalindrome(self, s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        a = ''
+        for x in s:
+            if x.isalpha(): 
+                a += x.lower()
+            if x.isnumeric(): 
+                a += x
+        return a == a[::-1]
